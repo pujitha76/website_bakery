@@ -1,0 +1,732 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .head{
+            height: 550px;
+            width: 100%;
+            border:2px solid transparent;
+            margin: auto;
+            background-image: url(https://img.freepik.com/free-photo/paper-bag-with-bread-basket-pastry_23-2148359148.jpg?size=626&ext=jpg&ga=GA1.1.1960724466.1692356297&semt=ais);
+            background-repeat: no-repeat;
+            background-size: cover;
+            object-fit: cover;
+            box-sizing: border-box;
+            padding-top: 110px;
+            padding-left: 500px;
+            line-height: 10px;
+            color: black;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .head h1{
+            font-size: 75px;
+            line-height: 11px;
+            margin-top: 15px;
+        }
+        .text{
+            height: 30px;
+            width: 200px;
+            border:2px solid transparent;
+            margin-top: -35px;
+        }
+        .img{
+            object-fit: cover;
+        }
+        .head-box{
+            height: 190px;
+            width: 450px;
+            border:2px solid transparent;
+            margin-top:50px;
+            display: grid;
+            grid-template-rows: 180px;
+            grid-template-columns: repeat(3,1fr);
+            grid-gap:22px;
+        }
+        .head-box>div{
+            border:2px solid transparent;
+            line-height: 17px;
+        }
+        .second-box{
+            height: 350px;
+            width: 100%;
+            border:2px solid transparent;
+        }
+        .second{
+            height: 300px;
+            width: 65%;
+            margin: auto;
+            border:2px solid transparent;
+            display:grid;
+            grid-template-rows: repeat(2,160px);
+            grid-template-columns: repeat(3,1fr);
+            grid-gap:20px;
+        }
+        .second>div{
+            border:2px solid transparent;
+            display:grid;
+            grid-template-rows: 100px;
+            grid-template-columns: 25% 75%;
+            grid-column-gap:10px;
+            margin-top: -10px;
+        }
+        .second>div>div{
+            border:2px solid transparent;
+        }
+        .second>div>div img{
+            object-fit: cover;
+        }
+        h3{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .third-box{
+            height: 350px;
+            width: 100%;
+            border: 2px solid transparent;
+            background-image: url(https://img.freepik.com/free-photo/side-view-azeri-national-pastries-shor-gogal-black_140725-12094.jpg?size=626&ext=jpg&ga=GA1.2.1960724466.1692356297&semt=ais);
+            background-repeat: no-repeat;
+            background-size: cover;
+            position: relative;
+            box-sizing: border-box;
+            padding-left: 740px;
+            padding-top: 60px;
+            color: white;
+            line-height: 5px;
+        }
+        .third-box h1{
+            line-height: 15px;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 32px;
+        }
+        .third-box>div{
+            border: 2px solid white;
+            height: 38px;
+            width: 170px;
+            border-radius: 23px;
+            line-height: 35px;
+            box-sizing: border-box;
+            padding-left: 30px;
+            margin-top: 18px;
+        }
+        .fourth-box{
+            height: 1250px;
+            width: 100%;
+            border: 2px solid transparent;
+            background-color: rgb(221, 221, 221);
+        }
+        .fourth-up{
+            height: 630px;
+            width: 860px;
+            margin: auto;
+            border:2px solid transparent;
+            display: grid;
+            grid-template-rows: repeat(2,315px);
+            grid-template-columns: repeat(4,1fr);
+            grid-gap:15px;
+        }
+        .fourth-up>div{
+            border:2px solid transparent;
+            background-color: white;
+            box-sizing: border-box;
+            padding: 10px 10px;
+            border-radius: 10px;
+            text-align: center;
+        }
+        .fourth-up h4{
+            line-height: 2px;
+        }
+        .fourth-box p{
+            text-align: center;  
+        }
+        .fourth-bottom>div{
+            height: 480px;
+            width: 490px;
+            border:2px solid transparent;
+            display: grid;
+            margin: auto;
+            margin-top: 60px;
+            grid-template-rows: repeat(3,145px);
+            grid-template-columns: repeat(2,1fr);
+            grid-gap:20px;
+        }
+        .fourth-bottom>div>div{
+            border:2px solid transparent;
+        }
+        .fourth-bottom>div>:nth-child(2){
+            grid-area: 1/2/3/3;
+        }
+        .head1{
+            margin-top: -5px;
+        } 
+        .head2{
+            margin-top: -21px;
+        }
+        .fifth{
+            height: 360px;
+            width: 100%;
+            border:2px solid transparent;
+        }
+        .fifth-box{
+            height: 300px;
+            width: 475px;
+            border:2px solid transparent;
+            display: grid;
+            margin: auto;
+            margin-top: 65px;
+            text-align: left;
+        }
+        .fifth-text p{
+            text-align: left;
+            margin-bottom: 23px;
+        }
+        .button{
+           height:40px;
+           width: 160px;
+           border:2px solid black;
+           color: black;
+           border-radius: 17px;
+           line-height: 36px;
+           box-sizing: border-box;
+           padding-left: 20px;
+           font-family: Arial, Helvetica, sans-serif;
+           font-size: 15px;
+        }
+        .sixth{
+            height: 420px;
+            width: 100%;
+            border:2px solid transparent;
+            background-image: url(https://img.freepik.com/free-photo/decorating-delicious-homemade-eclairs-with-chocolate-peanuts_155003-1868.jpg?size=626&ext=jpg&ga=GA1.2.1960724466.1692356297&semt=sph);
+            object-fit: cover;
+            background-repeat: no-repeat;
+            background-size: cover;
+            box-sizing: border-box;
+            padding: 20px 60px;
+            color: white;
+            text-align: center;
+        }
+        .sixth-boxes{
+            height: 200px;
+            width: 67%;
+            margin: auto;
+            margin-top: 30px;
+            border:2px solid transparent;
+            display: grid;
+            grid-template-rows: 235px;
+            grid-template-columns: repeat(3,1fr);
+            grid-gap: 20px;
+        }
+        .sixth-boxes>div{
+            border:2px solid transparent;
+            border-radius: 12px;
+            background-color: white;
+            color:black;
+            text-align: left;
+            box-sizing: border-box;
+            padding-left: 18px;
+        }
+        .seventh{
+            height: 600px;
+            width: 50%;
+            margin: auto;
+            border:2px solid transparent;
+            text-align: center;
+            display: grid;
+            grid-template-rows: 150px 380px;
+            grid-template-columns: 620px;
+            grid-gap:40px;
+            background-color: whitesmoke;
+        }
+        .seventh>div{
+            border:2px solid transparent;
+            margin-left: 40px;
+            text-align: center;
+            background-color: whitesmoke;
+        }
+        .button1{
+            height: 35px;
+            width: 160px;
+            border:2px solid black;
+            margin-left: 210px;
+            border-radius: 15px;
+            line-height: 31px;
+        }
+        @media only screen and (min-width:420px) and (max-width:720px){
+            .head{
+            height: 630px;
+            width: 719px;
+            background-image: url(https://img.freepik.com/free-photo/buns-drawing-near-orange-flowers_23-2147817063.jpg?size=626&ext=jpg&ga=GA1.1.1960724466.1692356297&semt=ais);
+            object-fit: cover;
+            box-sizing: border-box;
+            padding-top: 190px;
+            padding-left: 160px;
+            }
+            .head h1{
+            font-size: 65px;
+            }
+            .head-box{
+            grid-gap:15px;
+            }
+            .head-box>div{
+            font-size: 12px;
+            } 
+            .second-box{
+            height: 350px;
+            width: 100%;
+            border:2px solid transparent;
+            }
+            .second{
+            height: 700px;
+            width: 95%;
+            grid-template-rows: repeat(3,180px);
+            grid-template-columns: repeat(2,1fr);
+            grid-gap:25px;
+            }
+            .second>div{
+            grid-template-rows: 100px;
+            grid-template-columns: 25% 75%;
+            grid-column-gap:3px;
+            margin-top: -10px;
+            }
+            .third-box{
+            height: 350px;
+            width: 719px;
+            border: 2px solid transparent;
+            background-image: url(https://img.freepik.com/free-photo/side-view-azeri-national-pastries-shor-gogal-black_140725-12094.jpg?size=626&ext=jpg&ga=GA1.2.1960724466.1692356297&semt=ais);
+            background-repeat: no-repeat;
+            margin-top: 250px;
+            box-sizing: border-box;
+            padding-left: 350px;
+            padding-top: 60px;
+            line-height: 5px;
+            }
+            .third-box h1{
+            line-height: 15px;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 32px;
+            }
+            .third-box>div{
+            border: 2px solid white;
+            height: 38px;
+            width: 170px;
+            border-radius: 23px;
+            line-height: 35px;
+            box-sizing: border-box;
+            padding-left: 30px;
+            margin-top: 18px;
+            }
+            .fourth-box{
+            height: 1550px;
+            width: 715px;
+            border: 2px solid transparent;
+            margin: auto;
+            background-color: rgb(221, 221, 221);
+            }
+            .fourth-up{
+            height: 630px;
+            width: 600px;
+            margin: auto;
+            border:2px solid transparent;
+            display: grid;
+            grid-template-rows: repeat(3,315px);
+            grid-template-columns: repeat(3,1fr);
+            grid-gap:15px;
+            }
+            .fourth-box p{ 
+            font-size: 12px; 
+            }   
+            .fourth-bottom>div{
+            height: 480px;
+            width: 490px;
+            display: grid;
+            margin-top: 380px;
+            grid-template-rows: repeat(3,150px);
+            grid-template-columns: repeat(2,1fr);
+            grid-gap:20px;
+            }
+            .fourth-btext{
+            display: none;
+            }
+            .fifth-box{
+            height: 300px;
+            width: 475px;
+            border:2px solid transparent;
+            display: grid;
+            margin: auto;
+            margin-top: 65px;
+            text-align: left;
+            }
+            .sixth{
+            height: 450px;
+            width: 719px;
+            margin-top: 50px;
+            }
+            .sixth-boxes{
+            height: 280px;
+            margin-top: 30px;
+            margin-left: -30px;
+            display: grid;
+            grid-template-rows: 250px;
+            grid-template-columns: repeat(3,200px);
+            grid-gap: 10px;
+            }
+            .seventh{
+            width: 719px;
+            display: grid;
+            grid-template-rows: 200px 380px;
+            grid-template-columns: repeat(1,fr);
+            grid-gap:0px;
+            }
+            .seventh>div{
+             margin-left: 70px;
+            }
+            .seventh>div img{
+            width: 520px;
+            margin-top: 20px;
+            }
+            .button1{
+            margin-left: 170px;
+            }
+        }
+        @media only screen and (min-width:80px) and (max-width:420px){
+            .head{
+            height: 500px;
+            width: 419px;
+            background-image: url(https://img.freepik.com/free-photo/delicious-sushi-rolls-with-tuna-fish-stone-table_114579-46748.jpg?size=626&ext=jpg&ga=GA1.1.1960724466.1692356297&semt=ais);
+            object-fit: cover;
+            box-sizing: border-box;
+            padding-top: 100px;
+            padding-left: 50px;
+            }
+            .head h1{
+            font-size: 55px;
+            }
+            .head-box{
+            grid-gap:-40px;
+            grid-template-rows: 140px;
+            grid-template-columns: repeat(3,110px);
+            grid-gap:1px;
+            }
+            .head-box>div{
+            font-size: 10px;
+            }
+            .second-box{
+            height: 350px;
+            width: 100%;
+            border:2px solid transparent;
+            }
+            .second{
+            height: 800px;
+            width: 85%;
+            margin: auto;
+            border:2px solid transparent;
+            display:grid;
+            grid-template-rows: repeat(6,160px);
+            grid-template-columns: repeat(1,1fr);
+            grid-gap:1px;
+            }
+            .second>div{
+            display:grid;
+            grid-template-rows: 100px;
+            grid-template-columns: 25% 75%;
+            grid-column-gap:1px;
+            margin-top: -10px;
+            } 
+            .third-box{
+            height: 390px;
+            width: 419px;
+            margin-top: 620px;
+            box-sizing: border-box;
+            padding-left: 30px;
+            padding-top: 60px;
+            }
+            .third-box h1{
+            font-size: 28px;
+            }
+            .third-box>div{
+            margin-top: 18px;
+            }
+            .fourth-box{
+            height: 1800px;
+            width: 419px;
+            }
+            .fourth-up{
+            height: 630px;
+            width: 419px;
+            margin: auto;
+            margin-bottom: 390px;
+            box-sizing: border-box;
+            padding-left: 20px;
+            display: grid;
+            grid-template-rows: repeat(4,315px);
+            grid-template-columns: repeat(2,180px);
+            grid-gap:10px;
+            }
+            .fourth-bottom>div{
+            height: 300px;
+            width: 370px;
+            display: grid;
+            margin-top: 340px;
+            grid-template-rows: repeat(2,100px);
+            grid-template-columns: repeat(2,180px);
+            font-size: 13px;
+            grid-gap:10px;
+            }
+            .fourth-bottom>div img{
+            height: 260px;
+            }
+            .fourth-btext{
+            display: none;
+            }
+            .fifth-box{
+            width: 400px;
+            margin-top: 75px;
+            }
+            .sixth{
+            height: 780px;
+            width: 419px;
+            margin-top: 50px;
+            }
+            .sixth-boxes{
+            height: 300px;
+            margin-top: 30px;
+            margin-left: -30px;
+            display: grid;
+            grid-template-rows: repeat(3,200px);
+            grid-template-columns: 320px;
+            grid-gap: 10px;
+            }
+            .seventh{
+            width: 419px;
+            display: grid;
+            grid-template-rows: 200px 380px;
+            grid-template-columns: 380px;
+            grid-gap:0px;
+            font-size: 17px;
+            }
+            .seventh>div{
+            margin-left: 5px;
+            }
+            .seventh>div img{
+            width: 320px;
+            margin-top: 20px;
+            }
+            .button1{
+            margin-left: 95px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="head">
+        <div class="type"><p style="font-size: 18px; line-height: 15px; margin-bottom: 27px;">F&nbspA &nbspM&nbspI&nbspL&nbspY &nbsp &nbsp B&nbspA&nbspK&nbspE&nbspR&nbspY</p></div>
+        <h1>ORGANIC</h1>
+        <h1>BREADS</h1>
+        <div class="text"><p style="line-height: 10px; font-size: 14px; margin-top: 18px;">IMAGE FROM <u>FREEPIK</u></p></div>
+        <div class="head-box">
+            <div>
+                <h4 style="padding-bottom: 7px;">FIND US</h4>
+                <p>121 Rock Sreet,21</p>
+                <p>Avenue New York,NY</p>
+                <p>92103-9000</p>
+            </div>
+            <div>
+                <h4 style="padding-bottom: 7px;">HOURS</h4>
+                <p><b>Monday-Sunday</b></p>
+                <p>9am-7pm</p>
+                <p><b>Sunday</b></p>
+                <p>10am-6pm</p>
+            </div>
+            <div>
+                <h4 style="padding-bottom: 7px;">CALL US</h4>
+                <p style="padding-bottom: 13px;"><b><u>1 (234) 567-891</u></b></p>
+                <p><b><u>1 (345) 567-897</u></b></p>
+            </div>
+        </div>
+    </div>
+    <h1 style="margin-top: 30px; font-size: 40px;"><center>Delicious Baking</center></h1>
+        <div class="second-box">
+            <div class="second">
+                <div>
+                    <div>
+                        <img  style="margin-left: 8px; margin-top: 5px;" height="55px" width="55px" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSDnSuowlVEHvFWurP7SZjryYMuE4pCLBuBXw&usqp=CAU">
+                    </div>
+                    <div>
+                        <h3>Baked Fresh Daily</h3>
+                        <p>Our bread is baked fresh daily,contains no preservatives and is very high in quality.it is also especially nice and soft.</p>
+                    </div>
+                </div>
+                <div>
+                    <div>
+                        <img style="margin-left: 8px; margin-top: 3px;" height="58px" width="58px" src="data:image/png;base64,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">
+                    </div>
+                    <div>
+                        <h3>Great Value</h3>
+                        <p>With the most competetive prices on the market we are able to deliver great value without compromising on taste</p>
+                    </div>
+                </div>
+                <div>
+                    <div>
+                        <img style="margin-left: 8px; margin-top: 5px;" height="52px" width="52px" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSE7rL4Hz-0biwdDOOkg1f_HXaRYocHEF1yoQ&usqp=CAU">
+                    </div>
+                    <div>
+                        <h3>Institutions</h3>
+                        <p>We serve a wide range of institutions including universities,aorlines,hotels and schools.Order daily for tommorow.</p>
+                    </div>
+                </div>
+                <div>
+                    <div>
+                        <img style="margin-left: 8px; margin-top: 5px;" height="53px" width="53px" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQAtSepIGAaM4LORlBdJkqnCZUWjmsf9h7WSg&usqp=CAU">
+                    </div>
+                    <div>
+                        <h3>Delivery To Your Door</h3>
+                        <p>Sample text.Click to select the text box.Click again or double click to start editinh text.</p>
+                    </div>
+                </div>
+                <div>
+                    <div>
+                        <img style="margin-left: 13px; margin-top: 15px;" height="40px" width="40px" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQfmAODsYwv380olmfpNmmZvwLS4xLBAIspiA&usqp=CAU">
+                    </div>
+                    <div>
+                        <h3>No Order Too Large</h3>
+                        <p>Sample text.Click to select the text box.Click again or double click to start editinh text.</p>
+                    </div>
+                </div>
+                <div>
+                    <div>
+                        <img style="margin-left: 8px; margin-top: 3px;" height="55px" width="55px" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSsvzKUBeSjhZpPyNp2ocf62tiLRou8Q54H7kKkrlL_LSVj279s8xPCjImCWsYZAFQpJxM&usqp=CAU">
+                    </div>
+                    <div>
+                        <h3>Delicious Baking</h3>
+                        <p>Sample text.Click to select the text box.Click again or double click to start editinh text.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="third-box">
+            <h1>Fresh breads,</h1>
+            <h1>Cakes and pastries</h1><br>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit</p>
+            <p>Lorem ipsum dolor, sit amet consectetur.</p><br>
+            <p>Image from <u>Freepik</u></p><br>
+            <div>READ MORE</div>
+        </div>
+        <div class="fourth-box">
+            <h1><center>Our Breads</h1></center></h1>
+            <div class="fourth-up">
+                <div>
+                    <img  style="border-radius: 10px;" height="138px" width="100%" src="data:image/jpeg;base64,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">
+                    <h4><center>WHITE BREAD</center></h4>
+                    <p>Sample text.Click to select the text box.<u>Click again</u> or double click to start editing.</p>
+                    <p><u>more</u></p>
+                </div>
+                <div>
+                    <img style="border-radius: 10px;" height="138px" width="100%" src="data:image/jpeg;base64,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">
+                    <h4><center>FARMING BREAD</center></h4>
+                    <p>Sample text.Click to select the text box.<u>Click again</u> or double click to start editing.</p>
+                    <p><u>more</u></p>
+                </div>
+                <div>
+                    <img style="border-radius: 10px;" height="138px" width="100%" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQPgiUcup19Vw9s6LKwEzVCGeaDqy_5s2w_Eg&usqp=CAU">
+                    <h4><center>LOAF BREAD</center></h4>
+                    <p>Sample text.Click to select the text box.<u>Click again</u> or double click to start editing.</p>
+                    <p><u>more</u></p>
+                </div>
+                <div>
+                    <img style="border-radius: 10px;" height="138px" width="100%" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSTfEjQBDoy4-hqmTtzoM0BQ0FE0iArM3vmAQ&usqp=CAU">
+                    <h4><center>SOURDOUGH</center></h4>
+                    <p>Sample text.Click to select the text box.<u>Click again</u> or double click to start editing.</p>
+                    <p><u>more</u></p>
+                </div>
+                <div>
+                    <img style="border-radius: 10px;" height="138px" width="100%" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ5ZoeDCIqvUjmyt9lizWomPFd7MPZwzmO-RQ&usqp=CAU">
+                    <h4><center>OLIVE BREAD</center></h4>
+                    <p>Sample text.Click to select the text box.<u>Click again</u> or double click to start editing.</p>
+                    <p><u>more</u></p>
+                </div>
+                <div>
+                    <img style="border-radius: 10px;" height="135px" width="100%" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQVLhmIscXpy6gpSJKTahiA92pvqYgtzGMsbw&usqp=CAU">
+                    <h4 style="line-height: 14px;"><center>WHOLE-GRAIN BREAD</center></h4>
+                    <p style="line-height: 17px;">Sample text.Click to select the text box.<u>Click again</u> or double click to start editing.</p>
+                    <p><u>more</u></p>
+                </div>
+                <div>
+                    <img style="border-radius: 10px;" height="135px" width="100%" src="data:image/jpeg;base64,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">
+                    <h4 style="line-height: 14px;"><center>FARMING BREAD</center></h4>
+                    <p style="line-height: 17px;">Sample text.Click to select the text box.<u>Click again</u> or double click to start editing.</p>
+                    <p><u>more</u></p>
+                </div>
+                <div>
+                    <img style="border-radius: 10px;" height="135px" width="100%" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQHmRhW0yO07xTgKTGotJ3PE-nyemJGOd7OiqvUekf7tGsux0o8-lbxlLLwrI4CaimmdMI&usqp=CAU">
+                    <h4 style="line-height: 14px;"><center>BAGUETTE</center></h4>
+                    <p style="line-height: 17px;">Sample text.Click to select the text box.<u>Click again</u> or double click to start editing.</p>
+                    <p><u>more</u></p>
+                </div>
+            </div><br>
+            <p class="fourth-btext">Image From <u>Freepik</u></p>
+            <div class="fourth-bottom">
+                <div>
+                    <div>
+                        <h1 class="head1">Delicious Baking.</h1>
+                        <h1 class="head2">Exceptional Quality</h1>
+                    </div>
+                    <div>
+                        <img height="320px" width="100%" src="https://img.freepik.com/free-photo/sourdough-bread-table_140725-11004.jpg?size=626&ext=jpg&ga=GA1.1.1960724466.1692356297&semt=ais">
+                    </div>
+                    <div>
+                        <img height="285px" width="95%" style="margin-top: 29px;" src="https://img.freepik.com/free-photo/cheerful-young-man-baker-standing-bakery-holding-bread_171337-16119.jpg?size=626&ext=jpg&ga=GA1.2.1960724466.1692356297&semt=ais">
+                    </div>
+                    <div></div>
+                    <div></div>
+                </div>
+            </div>
+        </div>
+        <div class="fifth">
+            <div class="fifth-box">
+                <div class="fifth-text">
+                    <h3>We produce delicious bread,rolls and other products</h3>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellat eligendi, architecto corrupti facere asperiores impedit commodi ipsum soluta dolorum. Debitis explicabo, consequuntur reprehenderit quas iste error harum voluptatum.Lorem ipsum dolor sit amet consectetur adipisicing elit as lorum.</p>
+                    <p>Image from <u>Freepik</u></p>
+                    <div class="button">LEARN MORE</div>
+                </div>
+            </div>
+        </div>
+        <div class="sixth">
+            <h1>Sweets Menu</h1>
+            <div class="sixth-boxes">
+                <div>
+                    <h3>Cookies</h3>
+                    <p>-- Bicotti</p>
+                    <p>-- Chocolate Chip</p>
+                    <p>-- Oatmeal</p>
+                    <p>-- Oat Ginger Bar</p>
+                    <p>-- Seasonal specials</p>
+                </div>
+                <div>
+                    <h3>Scones</h3>
+                    <p>-- Classic botter scone</p>
+                    <p>-- Fresh fruits buttermilk scones</p>
+                    <p>-- Handmade Scones</p>
+                </div>
+                <div>
+                    <h3>Other</h3>
+                    <p>-- Seasonal gallates</p>
+                    <p>-- Tartles</p>
+                    <p>-- Banana Bread</p>
+                    <p>-- Bread pudding</p>
+                    <p>-- Cadberry Daiymilk</p>
+                </div>
+            </div>
+        </div>
+        <div class="seventh">
+            <div>
+                <h1>Our freshly baked bread is the hero of our breakfast menu</h1>
+                <div class="button1">READ MORE</div>
+            </div>
+            <div>
+                <img height="330" width="530px" src="https://img.freepik.com/free-photo/basket-bread-rolling-pin_23-2148359139.jpg?size=626&ext=jpg&ga=GA1.2.1960724466.1692356297&semt=sph">
+            </div>
+        </div>
+</body>
+</html>
